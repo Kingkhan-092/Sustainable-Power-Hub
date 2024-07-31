@@ -1,0 +1,573 @@
+/* Global styles for resetting margins, paddings, and setting default font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body styles: Sets background color, applies backdrop filter, and positions relative */
+body {
+    background-color: #000000;
+    backdrop-filter: blur(16px) saturate(120%);
+    position: relative;
+}
+
+/* Header styles: Positions header at the top with flexible layout */
+header {
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar container styles: Defines the layout and appearance of the navigation bar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 87%;
+    border-radius: 13px;
+    background-color: #ffffff;
+    backdrop-filter: blur(16px) saturate(120%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Logo container styles: Aligns and sizes the logo image */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Navigation bar styles: Defines the layout and appearance of navigation items */
+.navbar {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(120%);
+}
+
+/* Individual nav item styles: Sets layout, padding, and hover effects for nav items */
+.nav-item {
+    position: relative;
+    padding: 0 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0);
+}
+
+.nav-item:hover a {
+    color: #000000;
+    z-index: 1;
+}
+
+.nav-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #18ad08c7;
+    z-index: 1;
+}
+
+/* Dropdown menu styles: Handles the display and styling of dropdown content */
+.nav-item .dropdown-content {
+    display: none;
+    margin-top: 1px;
+    position: absolute;
+    top: 100%;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 10px;
+    backdrop-filter: blur(18px) saturate(120%);
+    flex-direction: column;
+    z-index: 2;
+}
+
+.nav-item:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+/* Search bar styles: Defines the appearance and behavior of the search input and icon */
+.search-bar {
+    background-color: #05040400;
+    padding: 0 4px;
+    height: 33px;
+    color: #ffffff;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.8s;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+    height: 30px;
+    color: #ffffff;
+    width: 0;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search-bar input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.search-bar .fa-magnifying-glass {
+    padding: 0px 5px 0px 5px;
+    color: #000000;
+    font-size: 19px;
+}
+
+.search-bar:hover .search-input {
+    width: 475px;
+    background-color: #000000;
+    border-radius: 10px;
+    border-left: #000000;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar:hover .fa-magnifying-glass {
+    color: #000000;
+}
+
+
+
+
+
+
+/* Hero section styles: Defines the background image, layout, and content positioning for the hero section */
+.hero {
+    width: 100%;
+    height: 700px;
+    background: url('/img/image1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 1s ease;
+    border-image: fill 0 linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+
+
+
+/* Main container for layout */
+.container {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 30px;
+    position: relative;
+    margin-top: -410px;
+    margin-bottom: 200px;
+    z-index: 2;
+    gap: 20px;
+}
+
+/* Contact form and info side-by-side */
+.contact-form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+/* Styles for contact form and info sections */
+.contact-form, .contact-info {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffde;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffffa9; 
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(220%);
+}
+
+/* Heading styles in contact form and info */
+.contact-form h1, .contact-form h2, .contact-info h2 {
+    margin-bottom: 20px;
+    color: #006b62;
+    text-decoration: underline;
+
+    text-align: center;
+}
+
+/* Styles for form labels */
+.contact-form label {
+    display: block;
+    color: #000000;
+}
+
+/* Rating section styling */
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating input[type="radio"] {
+    margin-left: 10px;
+}
+
+/* Form element styling */
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.contact-form input[type="submit"], .contact-form input[type="reset"] {
+    width: auto;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+    transition: transform 0.3s ease-in;
+}
+
+/* Button hover effects */
+.contact-form input[type="submit"]:hover, .contact-form input[type="reset"]:hover {
+    background-color: #4CAF50;
+    transform: scale(1.05)
+}
+
+/* Contact info paragraph styling */
+.contact-info p {
+    margin: 10px;
+    line-height: 1.6;
+}
+
+/* Heading styles in contact info */
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+/* Container for the image sections */
+.loc-image {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px; 
+    max-width: 100%; 
+}
+
+/* Each section within the image container */
+.loc-sec {
+    flex: 1;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-left: 10px;
+}
+
+/* Style for images */
+.loc-sec img {
+    width: 320px; 
+    height: 320px; 
+    object-fit: cover; 
+    display: block; 
+    border-radius: 10px;
+    border: 3px solid #000000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+.loc-sec img:hover {
+    transform: scale(1.01);
+}
+
+
+/* Map container styling */
+.map-container {
+    max-width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffde;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffffa9; 
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(220%);
+}
+
+/* Map heading styling */
+.map-container h2 {
+    margin: 10px;
+    color: #006b62;
+}
+
+/* Map iframe styling */
+.map-container iframe {
+    width: 100%;
+    background-color: #0000009f;
+    border-radius: 10px;
+    background: #c5c5c563; 
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(220%);
+}
+
+
+
+
+/* Marquee Section Styles */
+.marquee {
+    background-color: #000000fa;
+    width: 100%;
+}
+
+.marquee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(360deg, #40ffc98a, #00000095);
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    animation: slide 10s linear infinite;
+}
+
+.item {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.item > img {
+    max-width: 100%;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.item > img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Footer Section Styles */
+.footer {
+    color: #fff;
+    padding: 0 0 50px;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(360deg, #00000095, #40ffc98a);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.section-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000000;
+    background-image: url('/img/mar3.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links {
+    list-style: none;
+    padding: 0;
+}
+
+.section-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-image: url('/img/mar13.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-links a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.wrapper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    color: #000000;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon {
+    background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon {
+    background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon {
+    background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon {
+    background: #ff0000;
+}
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+    color: #4267B2;
+}
+.wrapper .button:nth-child(2) span {
+    color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span {
+    color: #E1306C;
+}
+.wrapper .button:nth-child(4) span {
+    color: #333;
+}
+.wrapper .button:nth-child(5) span {
+    color: #ff0000;
+}
+
+/* Responsive Design Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+

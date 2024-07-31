@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Providers - Sustainable Power Hub</title>
+    <!-- External CSS for styling -->
+    <link rel="stylesheet" href="/Providers/Providers.css">
+    <!-- favicon of the website -->
+    <link rel="icon" type="jpeg" href="/img/logo.jpeg">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome JavaScript for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- Body -->
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Container for navigation elements -->
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="/Home/index.html" target="_self"><img src="/img/logo-rembg.png" alt=""></a>
+            </div>
+            <!-- Navigation Menu -->
+            <nav class="navbar">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="   Search" class="search-input">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+                <!-- Dropdown Items -->
+                <div class="nav-item dropdown">
+                    <a href="/About Us/Aboutus.html" target="_blank">About Us</a>
+                    <div class="dropdown-content">
+                        <a href="/About Us/Aboutus.html">Our Mission</a>
+                        <a href="/About Us/Aboutus.html">Team</a>
+                        <a href="/About Us/Aboutus.html">Partners</a>
+                        <a href="/About Us/Aboutus.html">Impact</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="/Education/Educational.html" target="_blank">Education</a>
+                    <div class="dropdown-content">
+                        <a href="/Education/Educational.html">Content Library</a>
+                        <a href="/Education/Educational.html">Learning Path</a>
+                        <a href="/Education/Educational.html">Webinars</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="/Providers/Providers.html" target="_self">Providers</a>
+                    <div class="dropdown-content">
+                        <a href="/Providers/Providers.html">Search & Filters</a>
+                        <a href="/Providers/Providers.html">Providers Listing</a>
+                        <a href="/Providers/Providers.html">Comparison Tools</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="/Tools/Tools.html" target="_blank">Tools</a>
+                    <div class="dropdown-content">
+                        <a href="/Tools/Tools.html">Energy Saving Calculators</a>
+                        <a href="/Tools/Tools.html">ROI Calculator</a>
+                        <a href="/Tools/Tools.html">Carbon Footprint Calculator</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="/Community/Community.html" target="_blank">Community</a>
+                    <div class="dropdown-content">
+                        <a href="/Community/Community.html">Discussion Boards</a>
+                        <a href="/Community/Community.html">Latest Discussions</a>
+                        <a href="/Community/Community.html">Success Stories</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="/Contact/Contact.html" target="_blank">Contact</a>
+                    <div class="dropdown-content">
+                        <a href="/Contact/Contact.html">Contact Form</a>
+                        <a href="/Contact/Contact.html">Contact Information</a>
+                        <a href="/Contact/Contact.html">Map</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="/Login/Login.html" target="_blank">Login</a>
+                    <div class="dropdown-content">
+                        <a href="/Login/Login.html">Sign In</a>
+                        <a href="/Login/Login.html">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+<!-- Hero Section -->
+<div class="hero"></div> <!-- The hero section, likely to include a large background image or video -->
+
+
+<!-- Main Content -->
+<main>
+    <!-- Container for sidebar and main content -->
+    <div class="container">
+        <!-- Sidebar with top-rated and recently added providers -->
+        <div class="sidebar">
+            <h2>Top Rated Providers</h2>
+            <ul>
+                <li><a href="https://www.tesla.com/solarpanels">Tesla - 5 Stars</a></li>
+                <li><a href="https://www.sunpower.com/">SunPower - 4.5 Stars</a></li>
+                <li><a href="https://www.vestas.com/">Vestas - 4.2 Stars</a></li>
+            </ul>
+        
+            <h2>Recently Added Providers</h2>
+            <ul>
+                <li><a href="https://www.enphase.com/">Enphase Energy</a></li>
+                <li><a href="https://www.firstsolar.com/">First Solar</a></li>
+                <li><a href="https://www.siemens.com/global/en/home/products/energy.html">Siemens</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Directory of Renewable Energy Providers</h1>
+            <!-- Search and Filters -->
+            <div class="search-filters">
+                <div class="search">
+                    <input type="text" id="search-input" placeholder="Search providers..." oninput="applyFilters()">
+                </div>
+                <div class="filters">
+                    <label for="location-filter">Location:</label>
+                    <select id="location-filter" onchange="applyFilters()">
+                        <option value="">All Locations</option>
+                        <option value="North America">North America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="South America">South America</option>
+                    </select>
+                    
+                    <label for="energy-type-filter">Energy Type:</label>
+                    <select id="energy-type-filter" onchange="applyFilters()">
+                        <option value="">All Types</option>
+                        <option value="Solar">Solar</option>
+                        <option value="Wind">Wind</option>
+                        <option value="Hydro">Hydro</option>
+                        <option value="Energy Efficiency">Energy Efficiency</option>
+                        <option value="EV Charging">EV Charging</option>
+                        <option value="Building Materials">Building Materials</option>
+                    </select>
+                    
+                    <label for="services-filter">Services:</label>
+                    <select id="services-filter" onchange="applyFilters()">
+                        <option value="">All Services</option>
+                        <option value="Installation">Installation</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Consultation">Consultation</option>
+                    </select>
+    
+                    <label for="rating-filter">Rating:</label>
+                    <select id="rating-filter" onchange="applyFilters()">
+                        <option value="">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4.5">4.5 Stars & Up</option>
+                        <option value="4">4 Stars & Up</option>
+                        <option value="3.5">3.5 Stars & Up</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab active" id="solar-providers-tab" onclick="showProviderCategory('solar-providers')">Solar Energy Providers</div>
+                <div class="tab" id="wind-providers-tab" onclick="showProviderCategory('wind-providers')">Wind Energy Providers</div>
+                <div class="tab" id="hydro-providers-tab" onclick="showProviderCategory('hydro-providers')">Hydro Energy Providers</div>
+                <div class="tab" id="efficiency-solutions-tab" onclick="showProviderCategory('efficiency-solutions')">Energy Efficiency Solutions</div>
+                <div class="tab" id="ev-charging-stations-tab" onclick="showProviderCategory('ev-charging-stations')">Electric Vehicle Charging Stations</div>
+                <div class="tab" id="building-materials-tab" onclick="showProviderCategory('building-materials')">Sustainable Building Materials</div>
+            </div>
+    
+            <div class="providers-container">
+                <!-- Solar Energy Providers -->
+                <div class="provider-category" id="solar-providers">
+                    <p>Explore leading solar energy providers in your area offering innovative solar solutions.</p>
+                    <div class="provider" data-location="North America" data-energy-type="Solar" data-services="Installation, Maintenance" data-rating="4.9">
+                        <h3>SunPower</h3>
+                        <p>Rating: 4.9 Stars</p>
+                        <p>Description: Leading solar energy solutions provider known for high-efficiency solar panels in North America.</p>
+                        <a href="https://www.sunpower.com/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Asia" data-energy-type="Solar" data-services="Installation, Maintenance" data-rating="4.7">
+                        <h3>JA Solar</h3>
+                        <p>Rating: 4.7 Stars</p>
+                        <p>Description: Global solar panel manufacturer offering high-performance solar modules and solutions.</p>
+                        <a href="https://www.jasolar.com/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Europe" data-energy-type="Solar" data-services="Consultation" data-rating="4.8">
+                        <h3>Q CELLS</h3>
+                        <p>Rating: 4.8 Stars</p>
+                        <p>Description: Premier solar cell manufacturer providing efficient solar energy solutions across Europe.</p>
+                        <a href="https://www.q-cells.com/">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Wind Energy Providers -->
+                <div class="provider-category" id="wind-providers" style="display: none;">
+                    <p>Discover wind energy providers committed to harnessing wind power for a sustainable future.</p>
+                    <div class="provider" data-location="Europe" data-energy-type="Wind" data-services="Installation, Maintenance" data-rating="4.5">
+                        <h3>Vestas</h3>
+                        <p>Rating: 4.5 Stars</p>
+                        <p>Description: Renowned wind energy provider offering comprehensive services globally.</p>
+                        <a href="https://www.vestas.com/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="North America" data-energy-type="Wind" data-services="Maintenance" data-rating="4.6">
+                        <h3>GE Renewable Energy</h3>
+                        <p>Rating: 4.6 Stars</p>
+                        <p>Description: Major player in wind energy solutions with a strong presence in North America.</p>
+                        <a href="https://www.ge.com/renewableenergy/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Asia" data-energy-type="Wind" data-services="Consultation" data-rating="4.4">
+                        <h3>Siemens Gamesa</h3>
+                        <p>Rating: 4.4 Stars</p>
+                        <p>Description: Global leader in wind turbine manufacturing and wind farm services.</p>
+                        <a href="https://www.siemensgamesa.com/">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Hydro Energy Providers -->
+                <div class="provider-category" id="hydro-providers" style="display: none;">
+                    <p>Find leading hydro energy providers delivering effective hydroelectric solutions.</p>
+                    <div class="provider" data-location="South America" data-energy-type="Hydro" data-services="Consultation, Maintenance" data-rating="4.7">
+                        <h3>Andritz Hydro</h3>
+                        <p>Rating: 4.7 Stars</p>
+                        <p>Description: Provides comprehensive hydroelectric solutions and services worldwide.</p>
+                        <a href="https://www.andritz.com/hydro-en/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="North America" data-energy-type="Hydro" data-services="Installation" data-rating="4.6">
+                        <h3>Voith Hydro</h3>
+                        <p>Rating: 4.6 Stars</p>
+                        <p>Description: Offers hydroelectric equipment and services with a focus on sustainability.</p>
+                        <a href="https://voith.com/en/hydro.html">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Europe" data-energy-type="Hydro" data-services="Maintenance" data-rating="4.5">
+                        <h3>GE Hydro</h3>
+                        <p>Rating: 4.5 Stars</p>
+                        <p>Description: Specializes in hydroelectric power generation technologies and services.</p>
+                        <a href="https://www.ge.com/renewableenergy/hydro">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Energy Efficiency Solutions -->
+                <div class="provider-category" id="efficiency-solutions" style="display: none;">
+                    <p>Find providers offering energy-efficient products and services to reduce energy consumption.</p>
+                    <div class="provider" data-location="North America" data-energy-type="Energy Efficiency" data-services="Consultation" data-rating="4.9">
+                        <h3>Energy Star</h3>
+                        <p>Rating: 4.9 Stars</p>
+                        <p>Description: Provides energy-efficient products and advice to reduce energy consumption and costs.</p>
+                        <a href="https://www.energystar.gov/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Europe" data-energy-type="Energy Efficiency" data-services="Maintenance" data-rating="4.7">
+                        <h3>EcoHome</h3>
+                        <p>Rating: 4.7 Stars</p>
+                        <p>Description: Specializes in sustainable home improvements and energy-saving solutions.</p>
+                        <a href="https://www.ecohome.net/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Asia" data-energy-type="Energy Efficiency" data-services="Installation, Consultation" data-rating="4.6">
+                        <h3>Green Building Council</h3>
+                        <p>Rating: 4.6 Stars</p>
+                        <p>Description: Offers consulting services for green building practices and energy-efficient solutions.</p>
+                        <a href="https://www.gbca.org.au/">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Electric Vehicle Charging Stations -->
+                <div class="provider-category" id="ev-charging-stations" style="display: none;">
+                    <p>Locate electric vehicle charging station providers to support the transition to electric vehicles.</p>
+                    <div class="provider" data-location="North America" data-energy-type="EV Charging" data-services="Installation" data-rating="4.8">
+                        <h3>ChargePoint</h3>
+                        <p>Rating: 4.8 Stars</p>
+                        <p>Description: Leading provider of electric vehicle charging solutions with a large network of stations.</p>
+                        <a href="https://www.chargepoint.com/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Europe" data-energy-type="EV Charging" data-services="Maintenance" data-rating="4.7">
+                        <h3>EVBox</h3>
+                        <p>Rating: 4.7 Stars</p>
+                        <p>Description: Offers a range of electric vehicle charging stations and services across Europe.</p>
+                        <a href="https://www.evbox.com/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Asia" data-energy-type="EV Charging" data-services="Consultation" data-rating="4.6">
+                        <h3>ABB</h3>
+                        <p>Rating: 4.6 Stars</p>
+                        <p>Description: Provides innovative electric vehicle charging solutions and infrastructure support.</p>
+                        <a href="https://global.abb/">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Sustainable Building Materials -->
+                <div class="provider-category" id="building-materials" style="display: none;">
+                    <p>Explore providers of sustainable building materials for eco-friendly construction.</p>
+                    <div class="provider" data-location="Europe" data-energy-type="Building Materials" data-services="Consultation" data-rating="4.9">
+                        <h3>Green Building Store</h3>
+                        <p>Rating: 4.9 Stars</p>
+                        <p>Description: Offers a wide range of eco-friendly building materials and solutions for sustainable construction.</p>
+                        <a href="https://www.greenbuildingstore.co.uk/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="North America" data-energy-type="Building Materials" data-services="Installation" data-rating="4.8">
+                        <h3>Earth-Friendly Materials</h3>
+                        <p>Rating: 4.8 Stars</p>
+                        <p>Description: Specializes in sustainable building materials and eco-friendly construction solutions.</p>
+                        <a href="https://earthfriendlymaterials.com/">View Profile</a>
+                    </div>
+                    <div class="provider" data-location="Asia" data-energy-type="Building Materials" data-services="Consultation, Installation" data-rating="4.7">
+                        <h3>BioHome</h3>
+                        <p>Rating: 4.7 Stars</p>
+                        <p>Description: Provides sustainable building materials and green building solutions.</p>
+                        <a href="https://www.biohome.com/">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- Marquee Section -->
+
+<div class="marqee">
+    <div class="marquee-container">
+        <div class="marquee-wrapper">
+            <div class="carousel">
+                <div class="item"><img src="/img/mar1.jpeg" alt="UNDP"></div>
+                <div class="item"><img src="/img/mar2.jpg" alt="IRENA"></div>
+                <div class="item"><img src="/img/mar3.jpg" alt="Sustainable Energy for All"></div>
+                <div class="item"><img src="/img/mar4.png" alt="World Resources Institute"></div>
+                <div class="item"><img src="/img/mar5.png" alt="REN21"></div>
+                <div class="item"><img src="/img/mar6.jpg" alt="UN Environment Programme"></div>
+                <div class="item"><img src="/img/mar7.jpg" alt="CleanTechnica"></div>
+                <div class="item"><img src="/img/mar8.png" alt="Global Green Growth Institute"></div>
+                <div class="item"><img src="/img/mar9.jpg" alt="Ecofys"></div>
+                <div class="item"><img src="/img/mar10.png" alt="Greenpeace"></div>
+                <div class="item"><img src="/img/mar11.jpg" alt="World Bank"></div>
+                <div class="item"><img src="/img/mar12.jpg" alt="International Council on Clean Transportation"></div>
+                <div class="item"><img src="/img/mar13.png" alt="Natural Resources Defense Council"></div>
+                <div class="item"><img src="/img/mar14.png" alt="CDP"></div>
+                <div class="item"><img src="/img/mar15.png" alt="Energy Transitions Commission"></div>
+                <div class="item"><img src="/img/mar16.png" alt="International Renewable Energy Conference"></div>
+                <div class="item"><img src="/img/mar17.png" alt="EE Global Forum"></div>
+                <div class="item"><img src="/img/mar18.jpg" alt="SolarPower Europe"></div>
+                <div class="item"><img src="/img/mar19.jpg" alt="World Business Council for Sustainable Development"></div>
+                <div class="item"><img src="/img/mar20.png" alt="BloombergNEF"></div>
+                <div class="item"><img src="/img/mar21.png" alt="International Energy Agency"></div>
+                <div class="item"><img src="/img/mar22.png" alt="World Wildlife Fund"></div>
+                <div class="item"><img src="/img/mar23.png" alt="ICLEI - Local Governments for Sustainability"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Us Section -->
+        <div class="footer-section">
+            <h2 class="section-heading">About Us</h2>
+            <ul class="section-links">
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Impact Stories</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press Releases</a></li>
+            </ul>
+        </div>
+
+        <!-- Clean Energy Resources Section -->
+        <div class="footer-section">
+            <h2 class="section-heading">Clean Energy Resources</h2>
+            <ul class="section-links">
+                <li><a href="#">Solar Energy</a></li>
+                <li><a href="#">Wind Energy</a></li>
+                <li><a href="#">Hydro Energy</a></li>
+                <li><a href="#">Energy Efficiency</a></li>
+                <li><a href="#">Sustainable Practices</a></li>
+            </ul>
+        </div>
+
+         <!-- Get Involved Section -->
+         <div class="footer-section">
+            <h2 class="section-heading">Get Involved</h2>
+            <ul class="section-links">
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Partnerships</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+        </div>
+
+        <!-- Educational Content Section -->
+        <div class="footer-section">
+            <h2 class="section-heading">Educational Content</h2>
+            <ul class="section-links">
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Research Papers</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Webinars</a></li>
+                <li><a href="#">Workshops</a></li>
+            </ul>
+        </div>
+
+         <!-- Resources Section -->
+         <div class="footer-section">
+            <h2 class="section-heading">Resources</h2>
+            <ul class="section-links">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Research Reports</a></li>
+                <li><a href="#">Guides & Toolkits</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="footer-section">
+            <h2 class="section-heading">Contact Us</h2>
+            <ul class="section-links">
+                <li><a href="mailto:info@cleanenergyplatform.org">info@SustainablePowerHub.org</a></li>
+                <li><a href="tel:+1234567890">+91 7771 1100 12</a></li>
+                <li><a href="#">India</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section">
+            <h2 class="section-heading">Follow Us</h2>
+            <ul class="social-media-links">
+                <div class="wrapper">
+                    <div class="button">
+                       <div class="icon">
+                          <i class="fab fa-facebook-f"></i>
+                       </div>
+                       <span>Facebook</span>
+                    </div>
+                    <div class="button">
+                       <div class="icon">
+                          <i class="fab fa-twitter"></i>
+                       </div>
+                       <span>Twitter</span>
+                    </div>
+                    <div class="button">
+                       <div class="icon">
+                          <i class="fab fa-instagram"></i>
+                       </div>
+                       <span>Instagram</span>
+                    </div>
+                    <div class="button">
+                       <div class="icon">
+                          <i class="fab fa-github"></i>
+                       </div>
+                       <span>Github</span>
+                    </div>
+                    <div class="button">
+                       <div class="icon">
+                          <i class="fab fa-youtube"></i>
+                       </div>
+                       <span>YouTube</span>
+                    </div>
+                 </div>
+            </ul>
+        </div>
+    </div>    
+
+</footer>
+
+    <!-- External JavaScript for additional functionalities -->
+    <script src="/Providers/Providers.js"></script>
+</body>
+</html>

@@ -1,0 +1,625 @@
+/* Global styles for resetting margins, paddings, and setting default font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body styles: Sets background color, applies backdrop filter, and positions relative */
+body {
+    background-color: #000000;
+    backdrop-filter: blur(16px) saturate(120%);
+    position: relative;
+}
+
+/* Header styles: Positions header at the top with flexible layout */
+header {
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar container styles: Defines the layout and appearance of the navigation bar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 87%;
+    border-radius: 13px;
+    background-color: #ffffff;
+    backdrop-filter: blur(16px) saturate(120%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Logo container styles: Aligns and sizes the logo image */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Navigation bar styles: Defines the layout and appearance of navigation items */
+.navbar {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(120%);
+}
+
+/* Individual nav item styles: Sets layout, padding, and hover effects for nav items */
+.nav-item {
+    position: relative;
+    padding: 0 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0);
+}
+
+.nav-item:hover a {
+    color: #000000;
+    z-index: 1;
+}
+
+.nav-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #18ad08c7;
+    z-index: 1;
+}
+
+/* Dropdown menu styles: Handles the display and styling of dropdown content */
+.nav-item .dropdown-content {
+    display: none;
+    margin-top: 1px;
+    position: absolute;
+    top: 100%;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 10px;
+    backdrop-filter: blur(18px) saturate(120%);
+    flex-direction: column;
+    z-index: 2;
+}
+
+.nav-item:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+/* Search bar styles: Defines the appearance and behavior of the search input and icon */
+.search-bar {
+    background-color: #05040400;
+    padding: 0 4px;
+    height: 33px;
+    color: #ffffff;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.8s;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+    height: 30px;
+    color: #ffffff;
+    width: 0;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search-bar input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.search-bar .fa-magnifying-glass {
+    padding: 0px 5px 0px 5px;
+    color: #000000;
+    font-size: 19px;
+}
+
+.search-bar:hover .search-input {
+    width: 475px;
+    background-color: #000000;
+    border-radius: 10px;
+    border-left: #000000;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar:hover .fa-magnifying-glass {
+    color: #000000;
+}
+
+
+
+
+
+
+/* Hero section styles: Defines the background image, layout, and content positioning for the hero section */
+.hero {
+    width: 100%;
+    height: 700px;
+    background: url('/img/image1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 1s ease;
+    border-image: fill 0 linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+
+
+
+/* Main Content Container: Full width and positioning */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    margin-top: -400px; /* Adjust based on layout needs */
+    z-index: 2; /* Above the Image-marquee */
+}
+
+/* Image Marquee: Transparent background and positioning */
+.Image-marquee {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    position: relative;
+    transform: translateY(-50%);
+    z-index: 1; /* Below the hero section */
+}
+
+.Image-marquee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0; /* Vertical padding */
+}
+
+.Image-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image Carousel: Continuous scrolling animation */
+.Image-carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    animation: slide1 10s linear infinite;
+}
+
+.IM {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.Image-carousel .IM > img {
+    max-width: 100%;
+    height: 205px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.Image-carousel .IM > img:hover {
+    transform: scale(1.2); /* Zoom effect */
+}
+
+@keyframes slide1 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+}
+
+/* Main Content Section: Transparent background and padding */
+.main-content {
+    background-color: transparent;
+    padding: 40px;
+    margin-top: -120px; /* Adjust based on layout needs */
+}
+
+/* Main Content Heading: Text styling and background image */
+.main-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    background-image: url('/img/IM10.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+.main-content .text {
+    padding: 10px;
+    text-align: center;
+}
+
+.main-content p {
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+/* Section Margins: Consistent spacing */
+.our-mission, .team, .part, .impact {
+    margin-bottom: 60px;
+}
+
+/* Team and Partners: Layout and spacing */
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px; /* Consistent spacing */
+}
+
+.team-member, .partner {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-member img, .partner img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover, .partner img:hover {
+    transform: scale(1.1); /* Zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgb(255, 255, 255);
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    color: #b8d0bfe7;
+}
+
+.partner p {
+    margin: 10px 0;
+    color: #a3a3a3;
+    padding: 0 10px;
+}
+
+/* Impact Section: Flex layout for statistics */
+.impact-statistics {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 0px 20px 30px;
+}
+
+.impact-statistics .stat {
+    text-align: center;
+}
+
+.impact-statistics .stat h3 {
+    font-size: 2.5em;
+    color: #4CAF50;
+}
+
+.impact-statistics .stat p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.impact-statistics .count {
+    font-size: 48px; 
+    color: #4CAF50; 
+    transition: transform 0.3s ease;
+}
+
+.impact-statistics .count:hover {
+    transform: scale(1.1); /* Example hover effect */
+}
+
+/* Impact Infographics: Flex layout with hover effects */
+.impact-infographics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info1, .info2 {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.info1 img, .info2 img {
+    width: 40%;
+    border-radius: 10%;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.info1 img:hover, .info2 img:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 8px 16px rgb(0, 0, 0), 0 0 20px rgb(255, 255, 255);
+}
+
+.info1 p, .info2 p {
+    flex: 1;
+    margin: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Responsive Design: Adjustments for small screens */
+@media (max-width: 768px) {
+    .impact-infographics {
+        flex-direction: column; /* Stack vertically */
+    }
+}
+
+
+
+
+/* Marquee Section Styles */
+.marquee {
+    background-color: #000000fa;
+    width: 100%;
+}
+
+.marquee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(360deg, #40ffc98a, #00000095);
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    animation: slide 10s linear infinite;
+}
+
+.item {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.item > img {
+    max-width: 100%;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.item > img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Footer Section Styles */
+.footer {
+    color: #fff;
+    padding: 0 0 50px;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(360deg, #00000095, #40ffc98a);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.section-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000000;
+    background-image: url('/img/mar3.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links {
+    list-style: none;
+    padding: 0;
+}
+
+.section-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-image: url('/img/mar13.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-links a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.wrapper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    color: #000000;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon {
+    background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon {
+    background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon {
+    background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon {
+    background: #ff0000;
+}
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+    color: #4267B2;
+}
+.wrapper .button:nth-child(2) span {
+    color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span {
+    color: #E1306C;
+}
+.wrapper .button:nth-child(4) span {
+    color: #333;
+}
+.wrapper .button:nth-child(5) span {
+    color: #ff0000;
+}
+
+/* Responsive Design Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 10px 0;
+    }
+}

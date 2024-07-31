@@ -1,0 +1,951 @@
+/* Global styles for resetting margins, paddings, and setting default font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body styles: Sets background color, applies backdrop filter, and positions relative */
+body {
+    background-color: #000000;
+    backdrop-filter: blur(16px) saturate(120%);
+    position: relative;
+}
+
+/* Header styles: Positions header at the top with flexible layout */
+header {
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar container styles: Defines the layout and appearance of the navigation bar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 87%;
+    border-radius: 13px;
+    background-color: #ffffff;
+    backdrop-filter: blur(16px) saturate(120%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Logo container styles: Aligns and sizes the logo image */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Navigation bar styles: Defines the layout and appearance of navigation items */
+.navbar {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(120%);
+}
+
+/* Individual nav item styles: Sets layout, padding, and hover effects for nav items */
+.nav-item {
+    position: relative;
+    padding: 0 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0);
+}
+
+.nav-item:hover a {
+    color: #000000;
+    z-index: 1;
+}
+
+.nav-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #18ad08c7;
+    z-index: 1;
+}
+
+/* Dropdown menu styles: Handles the display and styling of dropdown content */
+.nav-item .dropdown-content {
+    display: none;
+    margin-top: 1px;
+    position: absolute;
+    top: 100%;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 10px;
+    backdrop-filter: blur(18px) saturate(120%);
+    flex-direction: column;
+    z-index: 2;
+}
+
+.nav-item:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+/* Search bar styles: Defines the appearance and behavior of the search input and icon */
+.search-bar {
+    background-color: #05040400;
+    padding: 0 4px;
+    height: 33px;
+    color: #ffffff;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.8s;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+    height: 30px;
+    color: #ffffff;
+    width: 0;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search-bar input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.search-bar .fa-magnifying-glass {
+    padding: 0px 5px 0px 5px;
+    color: #000000;
+    font-size: 19px;
+}
+
+.search-bar:hover .search-input {
+    width: 475px;
+    background-color: #000000;
+    border-radius: 10px;
+    border-left: #000000;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar:hover .fa-magnifying-glass {
+    color: #000000;
+}
+
+
+
+
+
+
+/* Hero section styles: Defines the background image, layout, and content positioning for the hero section */
+.hero {
+    width: 100%;
+    height: 700px;
+    background: url('/img/image1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 1s ease;
+    border-image: fill 0 linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+/* Hero content styles: Aligns and centers content within the hero section */
+.hero-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    text-align: center;
+}
+
+/* Intro text heading styles: Large, bold text for main heading */
+.intro-text h1 {
+    font-size: 65px;
+    font-weight: bold;
+    color: #C0C0C0;
+}
+
+/* Name styles: Applies text clipping and background image for the name */
+#name {
+    color: #000000;
+    background-image: url(/img/foot1.png);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Intro text subheading styles: Medium-sized text for subheading */
+.intro-text h3 {
+    font-size: 35px;
+    font-weight: 300;
+    color: #C0C0C0;
+}
+
+/* Call-to-action button styles: Defines the appearance and hover effect of the button */
+.cta-button button {
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    border: none;
+    border-radius: 10%;
+    font-size: 16px;
+    margin: 10px 10px 0px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button button:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: #12d604;
+}
+
+
+
+
+
+/* Main section styles: Container layout for main content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Divider styles: Horizontal line separating sections */
+.divider-edu,
+.divider-sec {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background-color: #04ffea;
+    box-shadow: 0 0 10px rgba(0, 255, 42, 0.5);
+}
+
+/* Container for educational resources: Styles the section containing educational resources */
+.educational-resources {
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.477);
+    text-align: center;
+    margin: 0px auto 10px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0), transparent) 1;
+    transition: transform 0.3s ease; /* Add transition for height change */
+    height: auto; /* Ensure it starts at auto height */
+}
+
+/* Heading style for resources: Large text for resource section heading */
+.educational-resources h2 {
+    font-size: 40px;
+    margin: 0px 0px 45px 0px;
+    color: #00d8c6;
+}
+
+/* Hidden resource styles: Hides resources that should not be displayed */
+.resource.hidden {
+    display: none; /* Hide hidden resources */
+}
+
+.resource-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styles for resource cards */
+.resource {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(50% - 20px);
+    max-width: 600px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(90deg, #dbdbdb7d, #00000052);
+}
+
+.resource.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Hover effect on resource card: Enlarges card and adds glow on hover */
+.resource:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.8); /* Added white light glow */
+    border-color: rgba(255, 255, 255, 0.8); /* White light glow on border */
+}
+
+.resource-icon {
+    width: 130px;
+    height: 130px;
+    margin-left:10px ;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Background images for icons: Sets specific images for each icon */
+.icon-1 {
+    background-image: url('/img/ER1.jpg');
+}
+
+.icon-2 {
+    background-image: url('/img/ER2.jpg');
+}
+
+.icon-3 {
+    background-image: url('/img/ER3.jpg');
+}
+
+.icon-4 {
+    background-image: url('/img/ER4.jpg');
+}
+
+.icon-5 {
+    background-image: url('/img/ER5.jpg');
+}
+
+.icon-6 {
+    background-image: url('/img/ER6.jpg');
+}
+
+/* Hover effect on icon: Enlarges icon on hover */
+.resource:hover .resource-icon {
+    transform: scale(1.06); /* Enlarge icon on hover */
+}
+
+
+.resource-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.resource-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.resource-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.resource-link {
+    font-size: 16px;
+    color: #0056b3;
+    text-decoration: none;
+    text-align: right;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: #003267;
+}
+
+.link-right {
+    text-align: right;
+}
+
+/* See more button */
+.see-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.see-more {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #678bb130;
+    color: #fff;
+    border: none;
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+.see-more:hover {
+    background-color: #ffffffea;
+    color: black;  
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.8);  
+}
+
+/* Key Features section */
+
+#key{
+    font-size: 40px;
+    margin: 25px 0px 45px 0px;
+    color: #00d8c6;
+    text-align: center;    
+}
+
+.key-features {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    
+}
+
+.feature-section:hover {
+    transform: translateY(-5px) scale(1.02); /* Move up on hover */
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.feature-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffffac;
+}
+
+.feature-icon i {
+    color: #ffffffac;
+    transition: transform 0.3s ease; /* Smooth transition for scale change */
+}
+
+.feature-icon:hover i {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+}
+
+.feature-content p {
+    font-size: 16px;
+    color: #ffffffac;
+    margin-bottom: 10px;
+}
+
+.feature-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a7b1bb; /* Primary color for button */
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.feature-content .btn:hover {
+    background-color: #000000b0; /* Darker shade of primary color on hover */
+    color: white;
+}
+
+/* Individual background images for each section */
+#find-providers {
+    background-image: url('/img/F1.png'); 
+    width: 90%;
+}
+
+#calculate-savings {
+    background-image: url('/img/F2.png'); /* Replace with your background image URL */
+    width: 90%;
+}
+
+#join-community {
+    background-image: url('/img/F3.png'); /* Replace with your background image URL */
+    width: 90%;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .resource {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .feature-section {
+        width: 100%;
+        max-width: unset;
+    }
+}
+
+
+
+/* General styles for the carousel wrapper */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000000;
+    padding-bottom: 40px;
+}
+
+/* Carousel heading styles: Styles for the heading above the carousel */
+.carousel-wrapper h2 {
+    color: white;
+    text-align: center;
+    margin: 100px 0px 40px 0px; /* Ensure margin pushes the heading above the carousel container */
+    font-size: 40px;
+    margin: 0px 0px 45px 0px;
+    color: #00d8c6;
+}
+
+/* Styles for the carousel container: Defines the container's size and overflow behavior */
+.carousel-container {
+    position: relative;
+    width: 95%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+/* Styles for the carousel content: Holder for items with smooth transition effects */
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Styles for each carousel item: Individual item styles within the carousel */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(40deg, #dbdbdb82, #00000095);
+}
+
+/* Image container styling: Container for images within carousel items */
+.carousel-image-container {
+    flex-shrink: 0;
+    width: 300px;
+    border-radius: 10px;
+    padding-left: 30px;
+}
+
+.carousel-image-container img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Text container styling: Container for text within carousel items */
+.carousel-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: calc(100% - 340px); /* Adjust based on image width and margin */
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.811);
+}
+
+.carousel-text-container h3 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.carousel-text-container p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Add styling for carousel controls: Positioning and appearance of carousel navigation controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Responsive design: Adjusts carousel layout for smaller screens */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex-direction: column;
+    }
+
+    .carousel-image-container,
+    .carousel-text-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .carousel-text-container {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+
+/* Newsletter Sign-Up Section Styles */
+.newsletter-signup {
+    background-color: #000000;
+    padding: 40px 0;
+    width: 100%;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-image: url('/img/mar3.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.signup-container p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form input[type="email"] {
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.signup-form button {
+    padding: 12px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #ffffff3f;
+}
+
+
+
+
+
+
+
+
+/* Marquee Section Styles */
+.marquee {
+    background-color: #000000fa;
+    width: 100%;
+}
+
+.marquee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(360deg, #40ffc98a, #00000095);
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    animation: slide 10s linear infinite;
+}
+
+.item {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.item > img {
+    max-width: 100%;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.item > img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Footer Section Styles */
+.footer {
+    color: #fff;
+    padding: 0 0 50px;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(360deg, #00000095, #40ffc98a);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.section-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000000;
+    background-image: url('/img/mar3.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links {
+    list-style: none;
+    padding: 0;
+}
+
+.section-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-image: url('/img/mar13.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-links a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.wrapper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    color: #000000;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon {
+    background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon {
+    background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon {
+    background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon {
+    background: #ff0000;
+}
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+    color: #4267B2;
+}
+.wrapper .button:nth-child(2) span {
+    color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span {
+    color: #E1306C;
+}
+.wrapper .button:nth-child(4) span {
+    color: #333;
+}
+.wrapper .button:nth-child(5) span {
+    color: #ff0000;
+}
+
+/* Responsive Design Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,604 @@
+/* Global styles for resetting margins, paddings, and setting default font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body styles: Sets background color, applies backdrop filter, and positions relative */
+body {
+    background-color: #000000;
+    backdrop-filter: blur(16px) saturate(120%);
+    position: relative;
+}
+
+/* Header styles: Positions header at the top with flexible layout */
+header {
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar container styles: Defines the layout and appearance of the navigation bar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 87%;
+    border-radius: 13px;
+    background-color: #ffffff;
+    backdrop-filter: blur(16px) saturate(120%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Logo container styles: Aligns and sizes the logo image */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Navigation bar styles: Defines the layout and appearance of navigation items */
+.navbar {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background: #ffffff1a;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(120%);
+}
+
+/* Individual nav item styles: Sets layout, padding, and hover effects for nav items */
+.nav-item {
+    position: relative;
+    padding: 0 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+    color: #000000;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0);
+}
+
+.nav-item:hover a {
+    color: #000000;
+    z-index: 1;
+}
+
+.nav-item:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #18ad08c7;
+    z-index: 1;
+}
+
+/* Dropdown menu styles: Handles the display and styling of dropdown content */
+.nav-item .dropdown-content {
+    display: none;
+    margin-top: 1px;
+    position: absolute;
+    top: 100%;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.67);
+    border-radius: 10px;
+    backdrop-filter: blur(18px) saturate(120%);
+    flex-direction: column;
+    z-index: 2;
+}
+
+.nav-item:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+/* Search bar styles: Defines the appearance and behavior of the search input and icon */
+.search-bar {
+    background-color: #05040400;
+    padding: 0 4px;
+    height: 33px;
+    color: #ffffff;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.8s;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+    height: 30px;
+    color: #ffffff;
+    width: 0;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search-bar input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.search-bar .fa-magnifying-glass {
+    padding: 0px 5px 0px 5px;
+    color: #000000;
+    font-size: 19px;
+}
+
+.search-bar:hover .search-input {
+    width: 475px;
+    background-color: #000000;
+    border-radius: 10px;
+    border-left: #000000;
+    background-image: linear-gradient(40deg, #30d85a82, #18590095);
+}
+
+.search-bar:hover .fa-magnifying-glass {
+    color: #000000;
+}
+
+
+
+
+
+
+/* Hero section styles: Defines the background image, layout, and content positioning for the hero section */
+.hero {
+    width: 100%;
+    height: 700px;
+    background: url('/img/image1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 1s ease;
+    border-image: fill 0 linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+
+
+
+/* Container for main layout */
+.container {
+    display: flex;
+    max-width: 100%;
+    padding: 30px;
+    margin-top: -410px;
+    margin-bottom: 200px;
+    gap: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 30%;
+    padding: 0 20px;
+    border-radius: 10px;
+    background: #c5c5c5bb;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(220%);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* Sidebar heading */
+.sidebar h2 {
+    color: #006b62;
+    padding: 20px 0;
+}
+
+/* Sidebar lists */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px;
+    padding: 5px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    transform: scale(1.01);
+    font-weight: 550;
+}
+
+/* Main content styling */
+.main-content {
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    background: #c5c5c563;
+    border: 1px solid #ffffff20;
+    backdrop-filter: blur(16px) saturate(220%);
+}
+
+/* Main content heading */
+.main-content h1 {
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-image: url('/img/SS3.webp');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Common styles for lists and articles */
+.discussion-boards ul, .latest-discussions ul, .success-stories article {
+    background-color: #0000009f;
+    border-radius: 8px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-boards ul li, .latest-discussions ul li, .success-stories article p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+    padding-left: 10px;
+}
+
+.discussion-boards ul li:hover, .latest-discussions ul li:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-boards ul li a, .latest-discussions ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.discussion-boards ul li a:hover, .latest-discussions ul li a:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the discussion images */
+.dis-img , .lat-img {
+    display: flex; 
+    gap: 10px;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border: 5px solid black; /* For bottom, right, and left */
+    border-top: none; 
+    border-bottom: none;  
+}
+
+/* Style for images inside the container */
+.dis-img img , .lat-img img {
+    width: 100%; 
+    max-width: 250px;
+    border: 2px solid #4CAF50;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+}
+
+/* Hover effect for images */
+.dis-img img:hover , .lat-img img:hover {
+    transform: scale(1.05); 
+}
+
+
+
+/* Style for article elements to use flex layout */
+article {
+    display: flex;
+}
+
+/* Style for <strong> elements to apply specific color */
+strong {
+    color: #00c88c;
+}
+
+
+
+/* Success stories specific styles */
+
+/* Style for h2 elements within success stories to set font size, color, and margins */
+.success-stories article h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.success-stories .comments h3 {
+    color: #b3b3b3;
+    font-size: 1.2rem;
+    margin: 20px;
+}
+
+.success-stories .comments p {
+    color: #ffffff;
+    margin: 10px;
+}
+
+.suc-stories {
+    width: 610px;
+
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+.suc-img {
+    display: flex; 
+    gap: 10px;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
+.suc-img img {
+    width: 100%; 
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+    border: 2px solid #4CAF50;
+}
+
+.suc-img img:hover {
+    transform: scale(1.05); 
+}
+
+
+
+/* Marquee Section Styles */
+.marquee {
+    background-color: #000000fa;
+    width: 100%;
+}
+
+.marquee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(360deg, #40ffc98a, #00000095);
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    animation: slide 10s linear infinite;
+}
+
+.item {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.item > img {
+    max-width: 100%;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.item > img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Footer Section Styles */
+.footer {
+    color: #fff;
+    padding: 0 0 50px;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(360deg, #00000095, #40ffc98a);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.section-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000000;
+    background-image: url('/img/mar3.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links {
+    list-style: none;
+    padding: 0;
+}
+
+.section-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-image: url('/img/mar13.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.section-links a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.wrapper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    color: #000000;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon {
+    background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon {
+    background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon {
+    background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon {
+    background: #ff0000;
+}
+
+.wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+    color: #4267B2;
+}
+.wrapper .button:nth-child(2) span {
+    color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span {
+    color: #E1306C;
+}
+.wrapper .button:nth-child(4) span {
+    color: #333;
+}
+.wrapper .button:nth-child(5) span {
+    color: #ff0000;
+}
+
+/* Responsive Design Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+
